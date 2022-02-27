@@ -10,10 +10,10 @@ const students = [
 function pickPropArray(students,arg)
 {
     let Array = [];
-    students.forEach(element)
+    for(const el of students)
     {
-        if(element.isset(arg)){
-            Array.push(element[arg]);
+        if(el.includes(arg)){
+            Array.push(el[arg]);
         }
     }
 }
