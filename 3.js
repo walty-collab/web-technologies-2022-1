@@ -2,9 +2,9 @@ function spinWords(string)
 {
     let arrayOfString = string.split(' '); 
     let array = [];
-    for (var i = arrayOfString.length; i >= 0; i--)
+    for (var i = arrayOfString.length-1; i >= 0; i--)
     {
-        for(const el of element)
+        for(const el of arrayOfString[i])
         {
             array.unshift(el);
         }
@@ -13,7 +13,7 @@ function spinWords(string)
     return array.join('');
     //return array;
 }
-
+//вася коля ясав ялок
 
 
 const result1 = spinWords( "Привет от Legacy" )
