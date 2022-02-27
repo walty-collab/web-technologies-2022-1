@@ -1,13 +1,15 @@
 function spinWords(string)
 {
-    let array = string.split(' ');    
-    for(const element of array)
+    let arrayOfString = string.split(' '); 
+    let array = [];
+    for (var i = arrayOfString.length; i >= 0; i--)
     {
         for(const el of element)
         {
             array.unshift(el);
-        }    
-    } 
+        }
+        array.unshift(' ');
+    }    
     return array.join('');
     //return array;
 }
