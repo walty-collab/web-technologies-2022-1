@@ -6,7 +6,8 @@ function spinWords(string)
     // {
     //     array.unshift(el);        
     // } 
-    // return array.join('');
+    //return array.join('');
+    return array;
 }
 
 
