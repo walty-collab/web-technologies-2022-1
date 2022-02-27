@@ -1,6 +1,12 @@
 function spinWords(string)
 {
-    
+    //let arrayOfStrings = stringToSplit.split(string);
+     let array = [];
+    for(const el of string)
+    {
+        array.push(el);        
+    } 
+    return array;
 }
 
 
