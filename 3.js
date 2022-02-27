@@ -11,9 +11,8 @@ function spinWords(string)
         array.unshift(' ');
     }    
     return array.join('');
-    //return array;
 }
-//вася коля ясав ялок
+
 
 
 const result1 = spinWords( "Привет от Legacy" )
