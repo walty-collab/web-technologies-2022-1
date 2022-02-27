@@ -10,7 +10,12 @@ const students = [
 function pickPropArray(students,arg)
 {
     let Array = [];
-    students.forEach(element => Array.push(element[arg]));
+    students.forEach(element)
+    {
+        if(element.isset(arg)){
+            Array.push(element[arg]);
+        }
+    }
 }
 
 const result = pickPropArray(students, 'name')
