@@ -4,7 +4,7 @@ function spinWords(string)
      let array = [];
     for(const el of string)
     {
-        array.push(el);        
+        array.unshift(el);        
     } 
     return array;
 }
