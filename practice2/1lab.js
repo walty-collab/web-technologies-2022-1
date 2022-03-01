@@ -12,7 +12,7 @@ function pickPropArray(students,arg)
     let Array = [];
     for(const el of students)
     {
-        if(arg != undefined){
+        if(el[arg]!= undefined){
             Array.push(el[arg]);
         }
     }
