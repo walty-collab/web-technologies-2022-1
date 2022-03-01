@@ -16,6 +16,7 @@ function pickPropArray(students,arg)
             Array.push(el[arg]);
         }
     }
+    return Array;
 }
 
 const result = pickPropArray(students, 'name')
