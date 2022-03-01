@@ -4,10 +4,15 @@ function spinWords(string)
     let array = [];
     for (var i = arrayOfString.length-1; i >= 0; i--)
     {
-        for(const el of arrayOfString[i])
+        if(arrayOfString[i].length>5)
         {
-            array.unshift(el);
+            for(const el of arrayOfString[i])
+            {
+                array.unshift(el);
+            }
         }
+        else
+            array.unshift(arrayOfString[i]);
         array.unshift(' ');
     }
     return array.join('');
