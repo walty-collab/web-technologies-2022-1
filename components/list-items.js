@@ -1,24 +1,28 @@
 export default class ListItems {
     constructor(el, data) {
-        this.el = el
-        this.data = data
+        this.el = el;
+        this.data = data;
+        this.render();
+        this.init();
     }
 
-    init() {
-        const parents = this.el.querySelectorAll('[data-parent]')
+    init () {
+        const parents = this.el.querySelectorAll('[data-parent]');
 
-        parents.forEach(parent => {
-            const open = parent.querySelector('[data-open]')
+        if (parents.length !== 0) {
+            parents.forEach( parent => {
+                const open = parent.querySelector('[data-open]');
 
-            open.addEventListener('click', () => this.toggleItems(parent) )
-        })
+                open.addEventListener('click', () => this.toggleItems(parent));
+            } )
+        }
     }
 
     render() {
-        this.el.insertAdjacentElement('beforeend', this.renderParent(this.data))
+        this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data));
     }
 
-    renderParent() {
+    renderParent(data) {
         if(data.hasChildren){
             let dataRow="<div class=\"list-item \" data-parent>\n" +
                 "<div class=\"list-item__inner\">\n" +
@@ -42,6 +46,6 @@ export default class ListItems {
     }
 
     toggleItems(parent) {
-        parent.classList.toggle('list-item_open')
+        parent.classList.toggle('list-item_open');
     }
 }

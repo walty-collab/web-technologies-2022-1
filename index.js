@@ -1,9 +1,9 @@
 import ListItems from "./components/list-items.js";
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoader', init)
 } else {
-    init()
+    init();
 }
 
 function init() {
@@ -32,7 +32,12 @@ function init() {
                         ]
                     },
                     {
-                        name: 'Ulgran2',
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
+                    },
+                    {
+                        name: 'Handmade',
                         hasChildren: true,
                         items: [
                             {
@@ -46,6 +51,11 @@ function init() {
                                 items: []
                             }
                         ]
+                    },
+                    {
+                        name: 'Vigro Glass',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
             },{
@@ -67,14 +77,16 @@ function init() {
                                 items: []
                             }
                         ]
+                    },
+                    {
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
             }
         ]
     }
 
-    const items = new ListItems(document.getElementById('list-items'), data)
-
-    items.render()
-    items.init()
+    const items = new ListItems(document.getElementById('list-items'), data);
 }
