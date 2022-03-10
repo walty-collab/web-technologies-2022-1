@@ -1,4 +1,4 @@
-import ListItems from "./components/list-items.js";
+import ListItems from "./components/ListItems.js";
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init)
