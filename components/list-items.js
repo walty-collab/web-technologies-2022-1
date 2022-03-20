@@ -27,7 +27,7 @@ export default class ListItems {
     // if hasChildren renderParent()
     let itemName = ''
 
-    data.items.forEach(el =>{
+    this.data.items.forEach(el =>{
       if (el.hasChildren) itemName += this.renderParent(el)
       else itemName += this.renderChildren(el)
     })
@@ -44,7 +44,7 @@ export default class ListItems {
                                alt="">
               
                           <span class="list-item__text">
-                              ${data.name}
+                              ${this.data.name}
                           </span>
                  </div>
               
@@ -65,7 +65,7 @@ export default class ListItems {
                                   alt="">
                                   
                               <span class="list-item__text">
-                                 ${data.name}
+                                 ${this.data.name}
                              </span>
                          </div>
                      </div>`    

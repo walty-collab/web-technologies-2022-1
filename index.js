@@ -6,7 +6,7 @@ if (document.readyState === 'loading') {
   init()
 }
 
-function init() {
+function init() {   
   const data = {
     name: 'Каталог товаров',
     hasChildren: true,
