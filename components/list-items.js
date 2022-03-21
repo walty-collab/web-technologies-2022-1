@@ -1,7 +1,7 @@
 export default class ListItems {
   constructor(el, data) {
-    this.el = el
-    this.data = data
+    this.el = el;
+    this.data = data;
   }
 
   init() {
@@ -15,19 +15,15 @@ export default class ListItems {
   }
   
   render() {
-    this.el.insertAdjacentElement('beforeend', this.renderParent(this.data))
+    //this.el.insertAdjacentElement('beforeend', this.renderParent(this.data))
+    this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data));
   }
   
-  renderParent() 
+  renderParent(data) 
   {
-    // проверка hasChildren
-    
-    // render
-    
-    // if hasChildren renderParent()
     let itemName = ''
 
-    this.data.items.forEach(el =>{
+    data.items.forEach(el =>{
       if (el.hasChildren) itemName += this.renderParent(el)
       else itemName += this.renderChildren(el)
     })
@@ -44,7 +40,7 @@ export default class ListItems {
                                alt="">
               
                           <span class="list-item__text">
-                              ${this.data.name}
+                              ${data.name}
                           </span>
                  </div>
               
@@ -56,7 +52,7 @@ export default class ListItems {
             </div>`
   }
   
-  renderChildren() 
+  renderChildren(data) 
   {
     return `<div class="list-item">
                          <div class="list-item__inner">
@@ -65,7 +61,7 @@ export default class ListItems {
                                   alt="">
                                   
                               <span class="list-item__text">
-                                 ${this.data.name}
+                                 ${data.name}
                              </span>
                          </div>
                      </div>`    
