@@ -71,8 +71,6 @@ export class Auth {
         const data = await result.json()
 
         if (data.ok) {
-            const token = data.data.accessToken
-            this.setToken(token)
             this.setUserInfo(data.data.user)
         } else {
             this.setUserInfo({}, true)
