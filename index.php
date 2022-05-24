@@ -96,15 +96,10 @@ function  mathOperation($arg1, $arg2, $operation){
         default: return "Операция не найдена";
     }
 }
-echo "Текстовое поле и кнопка НЕ РАБОТАЮТ, не нашел как это реализовать, хочу реализовать позже";
+echo "Текстовое поле и кнопка НЕ РАБОТАЮТ, не нашел как это реализовать, хочу реализовать позже <br>";
+echo "random(a) * b = ";
 echo  mathOperation($a,$b, "*");
 echo "<br><br>"
-
-/*function mathOperation($arg1, $arg2, $operation){
-echo $arg1;
-echo $arg2;
-echo $operation;
-}*/
 ?>
 
 <?php
