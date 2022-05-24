@@ -10,6 +10,7 @@
 </head>
 <body>
 <?php
+//7 практика + 4 задание из 8 практики
 $text = "Текст";
 $date = date('Y');
 $hours = date('h');
@@ -29,6 +30,8 @@ elseif ($minutes%10>=2 and $minutes%10<=4)
     echo "$minutes минуты <br><br>";
 else echo "$minutes минут <br><br>";
 
+//8 практическая
+//1 задание
 $a = rand(-10, 10);
 $b = rand(-10, 10);
 $result = 0;
@@ -48,6 +51,7 @@ elseif (($a>=0 and $b<0) or ($a<0 and $b>=0)){
     echo "a+b= $result <br><br>";
 }
 
+//2 задание
 $a = rand(0, 15);
 echo "random a = $a <br>";
 
@@ -70,23 +74,22 @@ switch ($a) {
     case 15: echo 15;
         break;
         echo "<br><br>";
-}
+}//ниже 3 задание 
 ?>
 
-<form action="action.php" method="POST">
-    <p>Операция: <input type="text" name="operation" value = "*"/></p>
-    <p><input type="submit" name="myActionName" /></p>
+<form action="/" method="POST">
+    <p><select size="4"  name="operation">
+            <option disabled>Выберите операцию</option>
+            <option selected value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select></p>
+    <p><input type="submit"  /></p>
 </form>
-<?php
-if (isset($_POST['myActionName']))
-{
-    $func = 'mathOperation';
-    $func('$arg1');
-
-}
-?>
 
 <?php
+$operation = $_POST['operation'];
 function  mathOperation($arg1, $arg2, $operation){
     switch ($operation){
         case "+": return $arg1 + $arg2;
@@ -96,13 +99,14 @@ function  mathOperation($arg1, $arg2, $operation){
         default: return "Операция не найдена";
     }
 }
-echo "Текстовое поле и кнопка НЕ РАБОТАЮТ, не нашел как это реализовать, хочу реализовать позже <br>";
-echo "random(a) * b = ";
-echo  mathOperation($a,$b, "*");
+
+echo "random(a) $operation b = ";
+echo  mathOperation($a,$b, $operation);
 echo "<br><br>"
 ?>
 
-<?php
+
+<?php //5 задание
 $i=0;
 do {
     if ($i == 0) {
@@ -120,34 +124,21 @@ do {
 } while ($i<=10);
 echo "<br>";
 
-
+//6 задание
 $regions = [
-    "Московская область" => "Москва", "Зеленоград", "Клин",
-    "Ленинградская область" => "Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт",
+    "Московская область" => ["Москва", "Зеленоград", "Клин"],
+    "Ленинградская область" => ["Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт"]
 ];
 
 foreach ($regions as $k => $v){
-    echo "$k => $v <br>";
+    echo "$k: ";
+    echo implode(', ', $v);
+    echo "<br>";
+
 }
 echo "<br>";
 
-/*foreach ($regions as $district => $cities){
-    echo "<div>".$district.":"."<div>";
-    for ($i=0; $i<count($cities);$i++){
-        if($i==count($cities)-1) echo $cities[$i].".";
-       else echo $cities[$i].", ";
-    }
-    echo "</div> </div>";*/
-
-
-/*foreach ($array as $k => $v){
-    echo "$k: ";
-        foreach ($array as $k => $v){
-        echo "$v,";
-    } 
-    echo "<br>";
-}*/
-
+//7 задание
 $words = [
     'а'=> 'a',
     'б'=> 'b',
@@ -185,6 +176,7 @@ $words = [
 ];
 echo strtr('проверка работы <br><br>',$words);
 
+//8 задание
 $menu = [
     "Меню1" => ["Меню1.1", "Меню1.2"=>["Меню1.2.1", "Меню1.2
    .2"],"Меню1.3"=>["Меню1.3.1"]],
