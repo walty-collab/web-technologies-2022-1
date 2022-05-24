@@ -96,6 +96,7 @@ function  mathOperation($arg1, $arg2, $operation){
         default: return "Операция не найдена";
     }
 }
+echo "Текстовое поле и кнопка НЕ РАБОТАЮТ, не нашел как это реализовать, хочу реализовать позже";
 echo  mathOperation($a,$b, "*");
 echo "<br><br>"
 
