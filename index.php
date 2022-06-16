@@ -1,4 +1,4 @@
-<?php $title= "Заголовок"; ?>
+<?php $title= "Заголовок1"; ?>
 <!doctype html>
 <html lang="en">
 <head>
