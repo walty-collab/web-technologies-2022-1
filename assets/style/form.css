@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: .5em;
     max-width: 400px;
-    width: 100%;
+    width: 100%;   
 }
 
 .form_init .text-field__error {
@@ -44,3 +44,4 @@
 .button {
     padding: .5em .75em;
 }
+

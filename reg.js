@@ -79,7 +79,7 @@ function init() {
             .forEach(field => {
                 obj[field.name] = field.input.value
             })
-            await new Auth().reg(obj)
+            await new Auth().reg(obj)            
         }
     ).init()
 

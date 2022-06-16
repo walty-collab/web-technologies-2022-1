@@ -33,6 +33,27 @@
     <div>
 
     </div>
+
+    <div class="todos" id="todo-list">
+        <div class="addTodo-form">
+            <form id="addTodo" class="form">
+                <label class="text-field" data-input>
+                    <input class="text-field__input" type="text"
+                           name="description"
+                           placeholder="Введите описание" autocomplete="off">
+                    <span class="text-field__error"></span>
+                </label>
+
+                <button id="add-todo" class="button" type="submit">
+                    Создать
+                </button>
+            </form>
+        </div>
+
+        <div class="user-todos" data-user-todos>
+
+        </div>
+    </div>
 </main>
 
 <script src="todos.js" type="module"></script>
