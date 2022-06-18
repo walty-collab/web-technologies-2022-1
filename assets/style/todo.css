@@ -1,0 +1,29 @@
+.user-todos {
+    margin-left: 150px;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.user-todo {
+    padding: 10px;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 3% 92% 5%;
+    background-color: #ff6918;    
+    
+}
+
+.completed {
+    background-color: #21ff25;
+}  
+
+.text-field{   
+   
+    margin-left: 250px;
+        
+}
+
+.button{
+    margin-left: 250px;
+    width: 100%;
+}

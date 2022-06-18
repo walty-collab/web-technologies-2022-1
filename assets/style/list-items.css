@@ -8,7 +8,7 @@
 
 .list-item_open > .list-item__inner .list-item__arrow {
     transform: rotate(180deg);
-}   
+}
 
 .list-item__inner {
     display: flex;

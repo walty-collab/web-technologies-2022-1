@@ -9,29 +9,20 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
 <header class="header">
     <nav class="nav">
-        <a href="/auth.html">auth</a>
-        <a href="/reg.html">reg</a>
-        <a href="/todos.html">todos</a>
+        <a href="./auth.html">auth</a>
+        <a href="./reg.html">reg</a>
+        <a href="./todos.html">todos</a>
+        <a href="./auth.html">logout</a>
     </nav>
 </header>
 
 <main class="main">
     <div class="user-info" data-user-info>
-        <div data-user-email>
-        </div>
-
-        <div data-user-name>
-        </div>
-
-        <div data-user-age>
-        </div>
-    </div>
-
-    <div>
-
+        <div data-user-email></div>
+        <div data-user-name></div>
+        <div data-user-age></div>
     </div>
 
     <div class="todos" id="todo-list">
@@ -40,7 +31,7 @@
                 <label class="text-field" data-input>
                     <input class="text-field__input" type="text"
                            name="description"
-                           placeholder="Введите описание" autocomplete="off">
+                           placeholder="введите описание" autocomplete="off">
                     <span class="text-field__error"></span>
                 </label>
 
@@ -56,6 +47,6 @@
     </div>
 </main>
 
-<script src="todos.js" type="module"></script>
+<script src="todos.js" type="module" defer></script>
 </body>
 </html>
